@@ -4,7 +4,7 @@
 
 // When true: Automatically selects the best model based on enabled options
 // When false: Uses the DEFAULT_MODEL_IDENTIFIER for all generations
-export const USE_DYNAMIC_MODEL_SELECTION = false;
+export const USE_DYNAMIC_MODEL_SELECTION = true;
 
 // Default model identifier (used when USE_DYNAMIC_MODEL_SELECTION is false)
 export const DEFAULT_MODEL_IDENTIFIER = "lightning-xl";
@@ -231,3 +231,4 @@ export function modelSupportsFeatures(modelId, features) {
   if (!model) return false;
   return features.every(feature => model.supports[feature]);
 }
+
